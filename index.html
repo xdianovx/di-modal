@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Модальное окно</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrap">
+          <a href="/" class="logo">LOGO</a>
+
+          <div class="header__right">
+            <button class="btn btn-main" data-micromodal-trigger="modal">
+              Войти
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Modal -->
+    <div class="modal micromodal-slide" id="modal" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div
+          class="modal__container"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-1-title"
+        >
+          <div class="modal__header">
+            <h2 class="modal__title" id="modal-1-title">Вход</h2>
+            <button
+              class="close-btn"
+              aria-label="Закрыть окно"
+              data-micromodal-close
+            ></button>
+          </div>
+
+          <form class="modal__content">
+            <input class="input" type="email" placeholder="E-mail" required />
+            <input
+              class="input"
+              type="password"
+              placeholder="Пароль"
+              required
+            />
+            <div class="modal__footer">
+              <button class="btn btn-main">Войти</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
